@@ -5,129 +5,177 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0A0A] text-white">
-      
+    <footer className="bg-[#0A0A0A] text-white border-t border-white/5 overflow-hidden">
+
       {/* 🔥 TOP CTA */}
-      <div className="px-6 md:px-10 py-20 border-b border-white/10">
+      <div className="px-6 md:px-10 py-24 border-b border-white/5">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto text-center"
+          className="max-w-[1280px] mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-[64px] font-bold tracking-[-0.04em] leading-[1]">
             LET’S CONNECT
           </h2>
 
-          <p className="mt-4 text-white/70 max-w-xl mx-auto">
-            Open to conversations, knowledge sharing, and meaningful opportunities 
-            in SEO, AI, and digital growth.
+          {/* Description */}
+          <p className="mt-6 text-white/65 text-base md:text-lg leading-[1.9] max-w-2xl mx-auto">
+            Open to conversations, knowledge sharing, digital growth discussions,
+            training opportunities, and meaningful professional connections
+            in SEO, AI, automation, and modern marketing.
           </p>
 
-          <Link href="/contact">
-            <button className="mt-8 bg-[#FF4D1C] px-6 py-3 text-white font-medium hover:opacity-90 transition">
-              Start a Conversation
-            </button>
-          </Link>
+          {/* CTA */}
+          <a
+  href="https://wa.me/917053051182"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="mt-10 bg-[#FF4D1C] text-white px-8 py-4 rounded-full uppercase tracking-wider text-sm font-semibold hover:opacity-90 transition-all duration-300 hover:scale-[1.02]">
+    Chat on WhatsApp
+  </button>
+</a>
+
         </motion.div>
       </div>
 
-      {/* 🧱 MIDDLE GRID */}
-      <div className="px-6 md:px-10 py-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-          
+      {/* 🧱 MAIN FOOTER */}
+      <div className="px-6 md:px-10 py-20">
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-3 gap-14">
+
           {/* About */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Krishan Dev</h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              SEO Manager specializing in Technical SEO, AI SEO (AEO & GEO), and 
-              automation-driven growth strategies. Sharing real-world insights, 
-              frameworks, and practical knowledge.
+
+            <h3 className="text-2xl font-semibold tracking-tight mb-6">
+              Krishan Dev
+            </h3>
+
+            <p className="text-white/65 text-base leading-[1.9]">
+              SEO Manager specializing in Technical SEO,
+              AI SEO (AEO & GEO), automation-driven growth systems,
+              and performance-focused website development.
             </p>
+
+            <p className="mt-5 text-white/45 text-base leading-[1.9]">
+              Sharing practical insights, real-world frameworks,
+              and scalable digital growth strategies.
+            </p>
+
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
+
+            <h3 className="text-2xl font-semibold tracking-tight mb-6">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-4 text-base">
+
               {[
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
                 { name: "Expertise", path: "/expertise" },
-                { name: "Work", path: "/work" },
+                { name: "Works", path: "/work" },
                 { name: "Blog", path: "/blog" },
                 { name: "Training", path: "/training" },
-                { name: "Contact", path: "/contact" },
+                { name: "Connect", path: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.path}
-                    className="text-white/70 hover:text-[#FF4D1C] transition"
+                    className="text-white/65 hover:text-[#FF4D1C] transition duration-300"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
+
             </ul>
+
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Connect</h3>
-            <ul className="space-y-2 text-sm">
+
+            <h3 className="text-2xl font-semibold tracking-tight mb-6">
+              Connect
+            </h3>
+
+            <ul className="space-y-4 text-base">
+
               <li>
                 <a
                   href="https://www.linkedin.com/in/krishan-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-[#FF4D1C] transition"
+                  className="text-white/65 hover:text-[#FF4D1C] transition duration-300"
                 >
                   LinkedIn
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://twitter.com/KrishanDevPrana"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-[#FF4D1C] transition"
+                  className="text-white/65 hover:text-[#FF4D1C] transition duration-300"
                 >
                   Twitter (X)
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://www.youtube.com/channel/UC_Hn0JH9MpD4wXpldZVkBTQ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-[#FF4D1C] transition"
+                  className="text-white/65 hover:text-[#FF4D1C] transition duration-300"
                 >
                   YouTube
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://www.facebook.com/krishan.pranami"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-[#FF4D1C] transition"
+                  className="text-white/65 hover:text-[#FF4D1C] transition duration-300"
                 >
                   Facebook
                 </a>
               </li>
+
             </ul>
+
           </div>
+
         </div>
       </div>
 
       {/* ⚖️ BOTTOM */}
-      <div className="px-6 md:px-10 py-6 border-t border-white/10 text-center text-sm text-white/50">
-        <p>© {new Date().getFullYear()} Krishan Dev. All rights reserved.</p>
-        <p className="mt-2">
-          This website is for personal branding, knowledge sharing, and professional networking purposes.
-        </p>
+      <div className="px-6 md:px-10 py-8 border-t border-white/5">
+        <div className="max-w-[1280px] mx-auto text-center">
+
+          <p className="text-sm md:text-base text-white/45">
+            © {new Date().getFullYear()} Krishan Dev. All rights reserved.
+          </p>
+
+          <p className="mt-3 text-sm md:text-base text-white/35 leading-[1.8] max-w-3xl mx-auto">
+            This website is created for personal branding,
+            knowledge sharing, professional networking,
+            training, and digital growth discussions.
+          </p>
+
+        </div>
       </div>
+
     </footer>
   );
 }
