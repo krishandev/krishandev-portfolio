@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "./seo";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Analytics from "@/components/seo/Analytics";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -157,6 +158,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <Analytics/>
+      </head>
       <body className={`${poppins.className} min-h-full flex flex-col`}>
         <script
   type="application/ld+json"
